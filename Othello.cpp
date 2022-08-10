@@ -119,6 +119,9 @@ enum WHO
     {2,2,2,2,2,0,2,2}
 */
 
+const char *UTF_8 = "chcp 65001";
+const char *SHIFT_JIS = "chcp 932";
+const char *ENCODE = UTF_8;
 const string USR = ">> ";
 const char SPRT = ' ';
 const int SIZE = 8;                         //盤面のサイズ(N × Nマス)
@@ -1278,6 +1281,7 @@ STONE Othello::State(TABLE &tb,STONE player)
 
 int main()
 {
+    system(ENCODE);
     Othello othello;
     othello.Run();
     return 0;
