@@ -122,6 +122,7 @@ enum WHO
 const char *UTF_8 = "chcp 65001";
 const char *SHIFT_JIS = "chcp 932";
 const char *ENCODE = UTF_8;
+const int ENTER = 10;
 const string USR = ">> ";
 const char SPRT = ' ';
 const int SIZE = 8;                         //盤面のサイズ(N × Nマス)
@@ -653,8 +654,9 @@ void Othello::Put()
         bool IsNotPuttable = false;
         if(kbhit())
         {
-            if(getch() == 'q') return;
-            switch(getch())
+            auto ch = getch();
+            if(ch == 'q') return;
+            switch(ch)
             {
                 case 'w':
                     if(IsBoundAtDirction(Cursor,DIRECTIONS[UP])) break;
@@ -672,7 +674,7 @@ void Othello::Put()
                     if(IsBoundAtDirction(Cursor,DIRECTIONS[RIGHT])) break;
                     Add(Cursor,DIRECTIONS[RIGHT]);
                     break;
-                case 13://enter
+                case ENTER://enter
                     if(this->IsAbletoPut(Cursor,this->Player)) IsEnter = true;
                     break;
             }
