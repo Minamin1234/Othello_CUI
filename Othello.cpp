@@ -70,7 +70,7 @@ qキーでエスケープ
 #include <algorithm>
 #include <functional>
 #include <numeric>
-#include "./conio.h"
+#include <conio.h>
 
 using namespace std;
 
