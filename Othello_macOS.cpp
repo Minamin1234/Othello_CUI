@@ -125,6 +125,7 @@ const char *ENCODE = UTF_8;
 const string USR = ">> ";
 const char SPRT = ' ';
 const int SIZE = 8;                         //盤面のサイズ(N × Nマス)
+const char *CMD_CLEARCONSOLE = "clear";
 const string C_EXIT = "exit";
 const string S_NONE = "- ";
 const string S_BLACK = "● ";
@@ -917,7 +918,7 @@ int Othello::CountWhite()
 //コンソールを消去します。
 void Othello::ClearConsole()
 {
-    system("cls");
+    system(CMD_CLEARCONSOLE);
 }
 
 //指定した方向に石配列を走査し、置いた石と異なる石を見つけたら裏返します。
@@ -1281,7 +1282,6 @@ STONE Othello::State(TABLE &tb,STONE player)
 
 int main()
 {
-    system(ENCODE);
     Othello othello;
     othello.Run();
     return 0;
