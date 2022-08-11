@@ -19,13 +19,14 @@
 
 ### ソースファイルからコンパイルして起動する場合
 1. ```Othello.cpp```/```Othello_mac.cpp```をC++プログラムとしてコンパイルします。ご利用のOSに応じたソースファイルをコンパイルします。<br>
-Windows用のexeファイルとしてg++でコンパイルする例
-<br>
-```g++ Othello.cpp -o Othello.exe```<br>
-macOS用のUnix実行ファイルとしてg++でコンパイルする例<br>
-```g++ Othello_mac.cpp -o Othello```
 2. コンパイルされたバイナリファイルを実行します。
 3. コマンドプロンプト/ターミナルが起動し、「Activate.」と表示されたらプレイできます。
+
+#### Windows用のexeファイルとしてg++でコンパイルする例
+``` g++ Othello.cpp -o Othello.exe```
+
+#### macOS用のUnix実行ファイルとしてg++でコンパイルする例
+```g++ Othello_mac.cpp -o Othello```
 
 ## 注意点
 ***
@@ -89,7 +90,7 @@ pair..交代で石を打つ試合。
 >プレイヤーが配置可能なマス目一覧を表示します。
 
 ```$ put```<br>
->石を打ちます。wsadキーでカーソル移動(複数回押す必要あり)、Enterで配置<br>
+>石を打ちます。wsadキーでカーソル移動 ~~(複数回押す必要あり)~~ 、Enterで配置<br>
 qキーでエスケープ
 
 ```$ stats```<br>
